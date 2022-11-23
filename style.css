@@ -1,4 +1,29 @@
-html, body {
-  height: 100%;
-  width: 100%;
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
 }
+
+body{
+  background-color: black;
+  color: white; 
+}
+input, textarea{
+  border:1px solid orange;
+  margin-bottom: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column; 
+  width: 300px
+}
+
+.message{
+  position: relative;
+  top:-100px
+}
+
+.btn{
+  padding: 10px 40px; 
+}
+

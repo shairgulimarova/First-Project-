@@ -9,15 +9,40 @@
 </head>
 
 <body>
-  Hello world
+  <form class="form">
+    <div>
+      <label>Your name</label>
+      <input placeholder="shairgul" class="name fields" minlength="3">
+    </div>
+    <div>
+      <label>Your e-mail</label>
+      <input placeholder="test@test.com" class="mail fields" pattern="[a-zA-Z0-9_\-\.]+[@][a-z][\.][a-z]{2,3}">
+    </div>
+    <div></div>
+    <div>
+      <label class="message">Your Message</label>
+
+      <textarea class="textarea fields" minlength="3" cols="20" rows="5"></textarea>
+    </div>
+    <div>
+      <input type="submit" class="btn" value="Send">
+    </div>
+
+  </form>
+
+
+
+
+
+
   <script src="script.js"></script>
 
- <!--
+  <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
   teal, blue, blurple, magenta, pink!
   -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
 
 </html>
