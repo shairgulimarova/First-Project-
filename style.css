@@ -20,11 +20,30 @@ input, textarea{
   border-radius:5px;
   padding:5px 0px;
 }
+input[type='text'].error, input[type="email"].error, textarea.error{
+  border-color:  red; 
+}
+
+input[type='text']:valid, input[type="email"]:valid, textarea.valid{
+  border-color:  green; 
+}
+
+
 form{
   display: flex;
   flex-direction: column; 
   width: 300px;
   margin:0 auto; 
+}
+
+
+.error-message{
+  color:red;
+  display:none; 
+}
+
+.error-message-show{
+  display:block; 
 }
 
 

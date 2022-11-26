@@ -1,10 +1,11 @@
 const myForm = document.querySelector(".form");
-                                                        
 const btn = document.querySelector(".btn");
 const inputName = document.querySelector('.name');
-const email = document.querySelector('.e-mail');
+const email = document.querySelector('.email');
 const textarea = document.querySelector('.textarea');
 const fields = document.querySelectorAll('.fields');
+const error = document.querySelectorAll('.error-message'); 
+
 
 
 
@@ -48,6 +49,35 @@ const fields = document.querySelectorAll('.fields');
 //   //console.log(event);  
 // })
 
+//Constraint Validation API
 
 
+inputName.addEventListener('input', function(event){
+  if(inputName.validity.valid){
+    inputName.classList.remove(); 
+  }
+})
 
+email.addEventListener('input', function(event){
+  if(email.validity.valid){
+    email.classList.remove(); 
+  }
+})
+
+
+myForm.addEventListener('submit', function(event) {
+  if (!inputName.validity.valid) {
+    inputName.classList.add('error');     
+    event.preventDefault();
+  }
+
+  if (!email.validity.valid) {
+    email.classList.add('error');
+    event.preventDefault();
+  }
+
+  if (!textarea.validity.valid) {
+    textarea.classList.add('error');
+    event.preventDefault();    
+  }
+})
