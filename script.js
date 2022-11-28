@@ -4,7 +4,7 @@ const inputName = document.querySelector('.name');
 const email = document.querySelector('.email');
 const textarea = document.querySelector('.textarea');
 const fields = document.querySelectorAll('.fields');
-const error = document.querySelectorAll('.error-message'); 
+const error = document.querySelectorAll('.error-message');
 
 
 
@@ -52,32 +52,45 @@ const error = document.querySelectorAll('.error-message');
 //Constraint Validation API
 
 
-inputName.addEventListener('input', function(event){
-  if(inputName.validity.valid){
-    inputName.classList.remove(); 
+inputName.addEventListener('input', function() {
+  if (inputName.validity.valid) {
+    inputName.classList.remove('error');
+    inputName.nextElementSibling.classList.remove('show')
   }
 })
 
-email.addEventListener('input', function(event){
-  if(email.validity.valid){
-    email.classList.remove(); 
+email.addEventListener('input', function() {
+  if (email.validity.valid) {
+    email.classList.remove('error');
+    email.nextElementSibling.classList.remove("show")
   }
 })
+
+textarea.addEventListener('input', function() {
+  if (textarea.validity.valid) {
+    textarea.classList.remove('error');
+    textarea.nextElementSibling.classList.remove("show")
+  }
+})
+
 
 
 myForm.addEventListener('submit', function(event) {
   if (!inputName.validity.valid) {
-    inputName.classList.add('error');     
+    inputName.classList.add('error');
+    inputName.nextElementSibling.classList.add('show')
     event.preventDefault();
   }
 
   if (!email.validity.valid) {
     email.classList.add('error');
+    email.nextElementSibling.classList.add("show")
     event.preventDefault();
   }
 
   if (!textarea.validity.valid) {
     textarea.classList.add('error');
-    event.preventDefault();    
+    textarea.nextElementSibling.classList.add('show')
+    event.preventDefault();
   }
 })

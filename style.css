@@ -20,11 +20,11 @@ input, textarea{
   border-radius:5px;
   padding:5px 0px;
 }
-input[type='text'].error, input[type="email"].error, textarea.error{
+input[type='text'].error, input[type='email'].error, input[type='textarea'].error{
   border-color:  red; 
 }
 
-input[type='text']:valid, input[type="email"]:valid, textarea.valid{
+input[type='text']:valid, input[type="email"]:valid, input[type='textarea']:valid{
   border-color:  green; 
 }
 
@@ -40,9 +40,11 @@ form{
 .error-message{
   color:red;
   display:none; 
+  position: relative; 
+  top:-20px; 
 }
 
-.error-message-show{
+.error-message.show{
   display:block; 
 }
 

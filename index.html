@@ -12,30 +12,34 @@
   <div class="container">
 
     <form class="form" novalidate>
-      <div class='error-message'>Please, fill in the field!</div>
+
       <div>
         <label>Your name</label>
       </div>
       <div>
         <input type='text' placeholder="shairgul" class="name" required>
+        <div class='error-message'>Please, fill in your name!</div>
       </div>
-      <div class='error-message'>Please, fill in the field!</div>
-      
+
       <div>
         <label>Your e-mail</label>
       </div>
       <div>
-        <input type='email' class="email"  required>
+        <input type='email' class="email fields" required>
+        <div class='error-message'>Please, fill your e-mail address!</div>
+
       </div>
-      <div class='error-message'>Please, fill in the field!</div>
-      
+
+
       <div>
         <label class="message">Your Message</label>
       </div>
       <div>
-        <textarea class="textarea" minlength="3" cols="20" rows="5" required > </textarea>
+        <!--         <textarea class="textarea" cols="20" rows="5" required> </textarea> -->
+        <input class='textarea fields' type='textarea' cols='20' rows='5' required>
+        <div class='error-message'>Please, fill in your message!</div>
       </div>
-      
+
       <div>
         <input type="submit" class="btn" value="Send">
       </div>
